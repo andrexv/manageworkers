@@ -201,6 +201,7 @@ RailsAdmin.config do |config|
         field :office_phone
         field :twitter
         field :facebook
+        field :teams
      end
      create do
         field :name
@@ -212,6 +213,7 @@ RailsAdmin.config do |config|
         field :office_phone
         field :twitter
         field :facebook
+        field :teams
      end
      update do; end
    end
