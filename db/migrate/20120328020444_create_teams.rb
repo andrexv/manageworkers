@@ -8,6 +8,6 @@ class CreateTeams < ActiveRecord::Migration
      end
    end
    def self.down
-     drop_table :workers
+     drop_table :teams
    end
 end

@@ -1,4 +1,8 @@
 ManageWorkers::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admindashboard', :as => 'rails_admin'
+
+  devise_for :admins
+  root :to => "rails_admin/main#dashboard"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
