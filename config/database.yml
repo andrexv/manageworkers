@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: manageworkers_test
   pool: 5
-  username: andresvisbal
+  username: postgres
   password:
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: manageworkers_production
   pool: 5
-  username: andresvisbal
+  username: postgres
   password:

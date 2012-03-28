@@ -7,6 +7,6 @@ describe Team do
   end
   
   it "should verify the presence of a name" do
-      Worker.create(@valid_params.merge(name: "")).should raise_error
+      Team.create(@valid_params.merge(name: "")).should raise_error
   end
 end

@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 gem 'pg'
 gem 'jquery-rails'
-gem 'activeadmin'
+gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'twitter'
 
