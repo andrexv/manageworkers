@@ -201,8 +201,8 @@ RailsAdmin.config do |config|
         field :office_phone
         field :twitter
         field :facebook
-        field :password
-        field :teams
+        field :password, :password
+        field :password_confirmation, :password
      end
      create do
         field :name
@@ -214,8 +214,8 @@ RailsAdmin.config do |config|
         field :office_phone
         field :twitter
         field :facebook
-        field :teams
-        field :password
+        field :password, :password
+        field :password_confirmation, :password
      end
      update do; end
    end
