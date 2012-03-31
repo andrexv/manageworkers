@@ -3995,3 +3995,6 @@ a.thumbnail:hover {
 .add_top{
 	margin-top:20px;
 }
+#worker_remember_me{
+	float:left;
+}

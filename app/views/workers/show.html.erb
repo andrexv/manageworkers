@@ -20,14 +20,18 @@
 					<dd>
 						<pre class="prettyprint"><%= @worker.gender %></pre>
 					</dd>
-					<dt class="email_field label string_type">Hometown</dt>
-					<dd>
-						<pre class="prettyprint"><%= @worker.hometown %></pre>
-					</dd>
-					<dt class="email_field label string_type">Location</dt>
-					<dd>
-						<pre class="prettyprint"><%= @worker.location %></pre>
-					</dd>
+					<% if @worker.fb_nickname.present? %>
+						<dt class="email_field label string_type">Hometown</dt>
+						<dd>
+							<pre class="prettyprint"><%= @worker.hometown %></pre>
+						</dd>
+					<% end %>
+					<% if @worker.fb_nickname.present? %>
+						<dt class="email_field label string_type">Location</dt>
+						<dd>
+							<pre class="prettyprint"><%= @worker.location %></pre>
+						</dd>
+					<% end %>
 					<dt class="label mobile_number_field string_type">Mobile number</dt>
 					<dd>
 						<pre class="prettyprint"><%= @worker.mobile_number %></pre>
@@ -44,6 +48,12 @@
 					<dd>
 						<pre class="prettyprint"><%= @worker.facebook %></pre>
 					</dd>
+					<% if @worker.fb_nickname.present? %>
+						<dt class="facebook_field label string_type">Facebook Nickname</dt>
+						<dd>
+							<pre class="prettyprint"><%= @worker.fb_nickname %></pre>
+						</dd>
+					<% end %>
 					<dt class="label string_type tw_avatar_field">Image</dt>
 					<dd>
 						<pre class="prettyprint"><%= image_tag(@worker.tw_avatar) %> <%= image_tag(@worker.fb_image) if @worker.fb_image.present? %></pre>
