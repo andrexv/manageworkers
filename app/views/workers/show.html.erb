@@ -18,7 +18,7 @@
 					</dd>
 					<dt class="email_field label string_type">Gender</dt>
 					<dd>
-						<pre class="prettyprint"><%= @worker.gender.capitalize %></pre>
+						<pre class="prettyprint"><%= @worker.gender %></pre>
 					</dd>
 					<dt class="email_field label string_type">Hometown</dt>
 					<dd>
@@ -46,7 +46,7 @@
 					</dd>
 					<dt class="label string_type tw_avatar_field">Image</dt>
 					<dd>
-						<pre class="prettyprint"><%= image_tag(@worker.tw_avatar) %> <%= image_tag(@worker.fb_image) %></pre>
+						<pre class="prettyprint"><%= image_tag(@worker.tw_avatar) %> <%= image_tag(@worker.fb_image) if @worker.fb_image.present? %></pre>
 					</dd>
 				</dl>
 			</div>

@@ -1,7 +1,7 @@
 class Workers::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     def facebook
         @worker = Worker.find_for_facebook_oauth(request.env["omniauth.auth"], current_worker)
-        if @worker
+        if @worker.present?
           flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"
           sign_in_and_redirect @worker, :event => :authentication
         else

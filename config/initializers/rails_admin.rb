@@ -194,7 +194,6 @@ RailsAdmin.config do |config|
      edit do
         field :name
         field :email 
-        field :gender
         field :home_address
         field :mobile_number
         field :landline_number
@@ -208,7 +207,6 @@ RailsAdmin.config do |config|
      create do
         field :name
         field :email 
-        field :gender
         field :home_address
         field :mobile_number
         field :landline_number
