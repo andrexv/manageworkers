@@ -10,7 +10,8 @@ describe Worker do
                      mobile_number:   '30020002000',
                      landline_number: '3000000',
                      twitter:         'rbates',
-                     facebook:        'www.facebook.com/user1'}
+                     facebook:        'www.facebook.com/user1',
+                     password:        '111111' }
   end
   
   it "should verify the presence of a name" do

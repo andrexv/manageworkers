@@ -1,0 +1,18 @@
+<%= render partial: "shared/worker_menu"%>
+
+<div class="span9">
+	<div class="row-fluid">
+		<div class="content">
+			<div class="page-header">
+				<h1>Editing My Profile</h1>
+			</div>
+			<div class="fieldset">
+				<%= render 'form' %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= link_to 'Show', @worker %> |
+<%= link_to 'Back', workers_path %>
+

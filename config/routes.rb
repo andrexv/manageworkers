@@ -2,7 +2,12 @@ ManageWorkers::Application.routes.draw do
   mount RailsAdmin::Engine => '/admindashboard', :as => 'rails_admin'
 
   devise_for :admins
-  root :to => "rails_admin/main#dashboard"
+  devise_for :workers, :controllers => { :omniauth_callbacks => "workers/omniauth_callbacks" }
+  
+  root :to => "workers#index"
+  
+  resources :workers, only: [:index, :edit, :show, :update]
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

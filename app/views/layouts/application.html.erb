@@ -7,10 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-<%= yield %>
-
+<%= add_flash %>
+<div class="container-fluid add_top">
+	<%= yield %>
+</div>
 </body>
 </html>

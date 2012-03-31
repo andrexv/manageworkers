@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'twitter'
+gem "omniauth-facebook"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -17,6 +18,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'vcr'
   gem 'fakeweb-matcher'
+  gem "capybara"
 end
 
 group :test do

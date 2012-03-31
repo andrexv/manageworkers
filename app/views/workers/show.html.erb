@@ -1,0 +1,55 @@
+<%= render partial: "shared/worker_menu"%>
+<div class="span9">
+	<div class="row-fluid">
+		<div class="content">
+			<div class="page-header">
+				<h1>My profile</h1>
+			</div>
+			<div class="fieldset">
+				<h4>Basic info</h4>
+				<dl>
+					<dt class="label name_field string_type">Name</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.name %></pre>
+					</dd>
+					<dt class="email_field label string_type">Email</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.email %></pre>
+					</dd>
+					<dt class="email_field label string_type">Gender</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.gender.capitalize %></pre>
+					</dd>
+					<dt class="email_field label string_type">Hometown</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.hometown %></pre>
+					</dd>
+					<dt class="email_field label string_type">Location</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.location %></pre>
+					</dd>
+					<dt class="label mobile_number_field string_type">Mobile number</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.mobile_number %></pre>
+					</dd>
+					<dt class="label landline_number_field string_type">Landline number</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.landline_number %></pre>
+					</dd>
+					<dt class="label string_type twitter_field">Twitter</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.twitter %></pre>
+					</dd>
+					<dt class="facebook_field label string_type">Facebook</dt>
+					<dd>
+						<pre class="prettyprint"><%= @worker.facebook %></pre>
+					</dd>
+					<dt class="label string_type tw_avatar_field">Image</dt>
+					<dd>
+						<pre class="prettyprint"><%= image_tag(@worker.tw_avatar) %> <%= image_tag(@worker.fb_image) %></pre>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>

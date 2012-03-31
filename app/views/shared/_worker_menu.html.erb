@@ -1,0 +1,9 @@
+<div class="span3">
+	<div class="well sidebar-nav">
+		<ul class="nav nav-list"><li class="nav-header">Navigation</li>
+		 <li><%= link_to "My Profile", worker_path(@worker) %></li>
+		 <li><%= link_to "Edit My Profile", edit_worker_path(@worker) %></li>
+		 <li><%= link_to "Log Out", destroy_worker_session_path, :method => :delete %></li>
+		</ul>
+	</div>
+</div>

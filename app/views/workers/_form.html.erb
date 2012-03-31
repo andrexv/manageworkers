@@ -1,0 +1,51 @@
+<%= form_for(@worker) do |f| %>
+  <% if @worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+      <ul>
+      <% @worker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+	
+	<fieldset>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+				
+		<%= f.label :home_address %>
+		<%= f.text_field :home_address %>
+
+		<%= f.label :mobile_number %>
+		<%= f.text_field :mobile_number %>
+
+		<%= f.label :landline_number %>
+		<%= f.text_field :landline_number %>
+
+		<%= f.label :office_address %>
+		<%= f.text_field :office_address %>
+
+		<%= f.label :office_phone %>
+		<%= f.text_field :office_phone %>
+
+		<%= f.label :twitter %>
+		<%= f.text_field :twitter %>
+
+		<%= f.label :facebook %>
+		<%= f.text_field :facebook %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	
+  <div class="form-actions">
+    <%= f.submit "Save", :class => "btn btn-info" %>
+  </div>
+<% end %>

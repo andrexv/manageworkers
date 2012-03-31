@@ -4,6 +4,11 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
+require 'capybara/rspec'
+require 'capybara/rails'
+
+require 'webmock/rspec'
+
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 VCR.configure do |c|
@@ -14,6 +19,9 @@ end
 
 RSpec.configure do |config|
   config.extend VCR::RSpec::Macros
+  
+  config.include Devise::TestHelpers, :type => :controller
+  
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -34,4 +42,15 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+  
+  config.use_instantiated_fixtures = false 
+  config.include(Capybara, :type => :integration)
+end
+
+def sign_in_worker(worker)
+  current_user = worker
+  if request.present?
+    sign_in(current_user)
+  end
+  return current_user
 end

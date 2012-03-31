@@ -194,6 +194,7 @@ RailsAdmin.config do |config|
      edit do
         field :name
         field :email 
+        field :gender
         field :home_address
         field :mobile_number
         field :landline_number
@@ -201,11 +202,13 @@ RailsAdmin.config do |config|
         field :office_phone
         field :twitter
         field :facebook
+        field :password
         field :teams
      end
      create do
         field :name
         field :email 
+        field :gender
         field :home_address
         field :mobile_number
         field :landline_number
@@ -214,6 +217,7 @@ RailsAdmin.config do |config|
         field :twitter
         field :facebook
         field :teams
+        field :password
      end
      update do; end
    end
